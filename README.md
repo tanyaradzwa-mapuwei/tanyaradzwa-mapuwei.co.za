@@ -18,4 +18,5 @@ There will be an image folder that will be there that store the pictures that wi
     - H2 - 35 - 800
     - H3 - 30 - 600
     - H4 - 25 - 400
+    - NV - 20 - 100
     - P  - 15 - 100
