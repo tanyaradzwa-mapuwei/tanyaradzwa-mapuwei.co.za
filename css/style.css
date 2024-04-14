@@ -12,12 +12,19 @@
     list-style: none;
     text-decoration: none;
 }
-
 /*COLOURS*/
 :root{
     --colour-1: #373F6A;
     --colour-2: #ffffff;
     --colour-3: #e5bbf1d5;
+}
+/*DEFAULT*/
+h1{
+    font-size: 32px;
+    color: var(--colour-1);
+}
+section{
+    height: 100vh;
 }
 /*HEADER*/
 header{
@@ -27,11 +34,6 @@ header{
     display: flex;
     align-items:center;
     justify-content: space-between;
-}
-/*DEFAULT*/
-h1{
-    font-size: 32px;
-    color: var(--colour-1);
 }
 /*NAVIGATION BAR*/
 .logo img{
@@ -133,8 +135,30 @@ h2 span{
     transform: rotate(360deg);
     box-shadow: 0 0 1rem var(--colour-3);
 }
+/*ABOUT ME*/
+#about{
+    background-color: var(--colour-1);
+    color: var(--colour-2);
+}
+#about h1{
+    color: var(--colour-3);
+    text-align: center;
+    font-size: 40px;
+}
+.about{
+    display:flex;
+    padding: 20px;
+    margin: 20px;
+}
+.about-content{
+    margin: 50px;
+}
+.about-pic img{
+    width: 500px;
+}
 /*Table screen 1*/
 @media only screen and (max-width: 1320px){
+    /*home*/
     .home{
         display: block;
         padding: 0px;
@@ -158,6 +182,21 @@ h2 span{
     .home-pic{
         text-align: center;
     }
+       /*ABOUT*/
+    .about{
+        display: block;
+        padding: 0px;
+    }
+    .about-content{
+        margin: 0px;
+    }
+    .about-pic img{
+        width: 300px;
+    }
+    .about-pic{
+        text-align: center;
+    }
+
 }
 /*Table screen 2*/
 @media only screen and (max-width: 1070px){
@@ -165,6 +204,9 @@ h2 span{
 
 }
 @media only screen and (max-width: 700px){
+    section{
+        height: 130vh;
+    }
     header{
         padding: 10px;
     }
@@ -229,7 +271,4 @@ h2 span{
     .nav-social a:hover{
         color: var(--colour-3);
     }
-    /**/
-
-    
 }
