@@ -35,7 +35,7 @@ navLinks.forEach(link => {
 
 /*Typed js*/
 const typed = new Typed('.multiple-text',{
-    strings: ['Welcome to my world!'],
+    strings: ['Tech','Music', 'Cooking', 'Baking','Farming'],
     typeSpeed: 100,
     backSpeed: 100,
     backDalay: 1000,
