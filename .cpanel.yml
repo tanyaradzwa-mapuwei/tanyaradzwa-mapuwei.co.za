@@ -2,6 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tanyarad/public_html/tanyaradzwa-mapuwei.co.za
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp css/style.css $DEPLOYPATH
-    - /bin/cp js/script.js $DEPLOYPATH
+    - /bin/cp -R tanyaradzwa-mapuwei.co.za $DEPLOYPATH
+   
