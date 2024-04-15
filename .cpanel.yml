@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tanyarad/public_html/tanyaradzwa-mapuwei.co.za
