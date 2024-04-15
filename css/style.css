@@ -156,6 +156,41 @@ h2 span{
 .about-pic img{
     width: 500px;
 }
+#interest h1{
+    text-align: center;
+}
+.interest{
+    display: flex;
+    transition: 0.5s;
+}
+.interest h2{
+    color: var(--colour-1);
+}
+.interest i{
+    font-size: 30px;
+    color: var(--colour-1);
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    border:solid 5px var(--colour-1);
+}
+.interest i:hover{
+    font-size: 30px;
+    color: var(--colour-2);
+    background-color: #373F6A;
+}
+.interest img{
+    width: 100px;
+}
+.tech, .music, .food, .farm{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    width: 500px;
+    height: 550px;
+    border:solid 5px var(--colour-1);
+    border-radius: 5%;
+}
 /*Table screen 1*/
 @media only screen and (max-width: 1320px){
     /*home*/
@@ -196,7 +231,18 @@ h2 span{
     .about-pic{
         text-align: center;
     }
-
+    .interest{
+        display: block;
+    }
+    .tech, .music, .food, .farm{
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        width: 350px;
+        height: 500px;
+        border:solid 5px var(--colour-1);
+        border-radius: 5%;
+    }
 }
 /*Table screen 2*/
 @media only screen and (max-width: 1070px){
