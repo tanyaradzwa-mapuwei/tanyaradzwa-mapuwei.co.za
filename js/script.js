@@ -33,11 +33,13 @@ navLinks.forEach(link => {
 });
 
 
+
 /*Typed js*/
-const typed = new Typed('.multiple-text',{
+const typedPersonal = new Typed('.multiple-text',{
     strings: ['Tech','Music', 'Cooking', 'Baking','Farming'],
     typeSpeed: 100,
     backSpeed: 100,
     backDalay: 1000,
     loop: true
 });
+

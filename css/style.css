@@ -17,11 +17,19 @@
     --colour-1: #373F6A;
     --colour-2: #ffffff;
     --colour-3: #e5bbf1d5;
+    --colour-4: #70031d;
+    --colour-5: #030338;
+
 }
 /*DEFAULT*/
 h1{
-    font-size: 32px;
+    font-size: 40px;
     color: var(--colour-1);
+    font-weight: 900;
+}
+h2{
+    font-size: 35px;
+    font-weight: 800;
 }
 /*HEADER*/
 header{
@@ -169,24 +177,34 @@ h2 span{
     padding: 5px;
     width: 200px;
     height: 50px;
-    border:solid 5px var(--colour-1);
 }
-.interest i:hover{
-    font-size: 30px;
+.interest-box button{
+    width: 200px;
+    height: 30px;
+    color: var(--colour-1);
+    background-color: var(--colour-2);
+    border: solid 2px var(--colour-1);
+}
+.interest-box button:hover{
     color: var(--colour-2);
-    background-color: #373F6A;
+    background-color: var(--colour-1);
+    border: solid 2px var(--colour-3);
 }
 .interest img{
     width: 100px;
 }
-.tech, .music, .food, .farm{
+.interest-box{
     text-align: center;
     padding: 10px;
     margin: 20px;
-    width: 500px;
-    height: 550px;
+    width: 320px;
+    height: 450px;
     border:solid 5px var(--colour-1);
-    border-radius: 5%;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.interest-box:hover{
+    transform:scale(1.1)
 }
 #contact{
     background-color: var(--colour-1);
@@ -259,6 +277,7 @@ textarea{
     color: var(--colour-2);
 }
 
+
 /*Table screen 1*/
 @media only screen and (max-width: 1320px){
     /*home*/
@@ -320,6 +339,7 @@ textarea{
     .btn{
         width: 20rem;
     }
+
 }
 /*Table screen 2*/
 @media only screen and (max-width: 1070px){
@@ -327,7 +347,6 @@ textarea{
 
 }
 @media only screen and (max-width: 700px){
-
     header{
         padding: 10px;
     }
@@ -391,5 +410,272 @@ textarea{
     }
     .nav-social a:hover{
         color: var(--colour-3);
+    }
+
+}
+
+.dev-header header{
+    background-color: var(--colour-4);
+}
+.dev-header nav{
+    background-color: var(--colour-4);
+}
+.dev-header nav ul li a{
+    color: var(--colour-5);
+    font-weight: 600;
+}
+.dev-header nav ul li .active{
+    color: var(--colour-2);
+}
+.dev-header nav ul li a:hover{
+    color: var(--colour-2);
+    content: none;
+    font-weight: 700;
+}
+.dev-header .nav-bar li a::after {
+    content: none;
+}
+.heading-1{
+    color: var(--colour-4);
+}
+.heading-2{
+    color: var(--colour-5);
+}
+.heading-3{
+    font-size: 30px;
+    color: var(--colour-4);
+}
+.heading-3 span{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--colour-5);
+}
+
+.home-content #home-socials i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--colour-4);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--colour-4);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s;
+}
+.home-content #home-socials i:hover{
+    background-color: var(--colour-4);
+    color: var(--colour-2);
+    transform: rotate(360deg);
+    box-shadow: 0 0 1rem var(--colour-3);
+}
+.skills{
+    padding: 30px;
+}
+.skills h1{
+    text-align: center;
+}
+.skills p{
+    text-align: center;
+}
+.skills-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-container .skills-box{
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--colour-5);
+    transition: .5s ease;
+}
+
+.skills-container .skills-box:hover{
+    border-color:var(--colour-4);
+    transform: scale(1.02);
+}
+
+
+.skills-box i{
+    font-size: 3rem;
+    color: var(--colour-5);
+}
+.skills-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0.3rem;
+    text-align: center;
+}
+.skill-dis{
+    border: solid 2px var(--colour-5);
+    background-color: var(--colour-4);
+    color: var(--colour-5);
+    font-weight: 500;
+}
+.portfolio h1{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--colour-4);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--colour-4));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+.portfolio-layer h4{
+    font-size: 1.5rem;
+    color: var(--colour-5);
+}
+
+.portfolio-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+    color: var(--colour-2);
+}
+
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: var(--colour-5);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i{
+    font-size: 1.5rem;
+    color: var(--colour-4);
+}
+.contacts{
+    color: var(--colour-2);
+}
+.contacts h1{
+    text-align: center;
+    margin-top: 5rem;
+    padding: 5rem;
+}
+.contacts form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contacts form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts form .input-box input, 
+.contacts form textarea{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+    color: var(--colour-2);
+    border: solid .3rem var(--colour-5);
+    background: var(--colour-4);
+    margin: .7rem 0;
+}
+
+.contacts form .input-box input{
+    width: 49%;
+}
+
+.contacts form textarea{
+    resize: none;
+}
+
+.contacts form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: var(--colour-5);
+    border:solid .3rem var(--colour-4);
+}
+.footer-info p{
+    font-size: 1rem;
+    color: var(--colour-5);
+ }
+ .footer-top a{
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     padding: .8rem;
+     background:var(--colour-5);
+     border-radius: .8rem;
+     font-weight: 900;
+ }
+ 
+ .footer-top a:hover{
+     box-shadow: 0 0 1rem var(--colour-4);
+ }
+ 
+ .footer-top a i{
+     font-size: 1rem;
+     font-weight: 900;
+     color: var(--colour-4);
+ }
+.contacts form .btn:hover{
+    background-color: var(--colour-4);
+    border:solid .3rem var(--colour-5);
+}
+@media only screen and (max-width: 1320px){
+    .home-content #home-socials i{
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+    .skills p{
+        font-size: 15px;
+    }
+    .portfolio-container{
+        grid-template-columns: 1fr;
     }
 }
