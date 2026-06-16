@@ -1,0 +1,11 @@
+---
+layout: base.njk
+---
+<article class="post-page">
+  <a class="back-link" href="/blog/">← Back to blog</a>
+  <p class="eyebrow">{{ category }}</p>
+  <h1>{{ title }}</h1>
+  <p class="post-meta">{{ date | readableDate }}</p>
+  <div class="post-pattern pattern-card"><span>{{ category }}</span></div>
+  <div class="post-content">{{ content | safe }}</div>
+</article>

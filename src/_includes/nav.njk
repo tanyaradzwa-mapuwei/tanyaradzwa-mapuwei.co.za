@@ -1,0 +1,20 @@
+<header class="site-header{% if professionalPage %} professional-header{% endif %}">
+  <a class="brand" href="{% if professionalPage %}/professional-portfolio/{% else %}/{% endif %}">
+    <span class="brand-mark">TM</span>
+    <span>{% if professionalPage %}Professional Portfolio{% else %}Tanyaradzwa Mapuwei{% endif %}</span>
+  </a>
+  <button class="nav-toggle" aria-label="Open menu">☰</button>
+  <nav class="main-nav{% if professionalPage %} professional-tabs{% endif %}">
+    {% if professionalPage %}
+      <a href="/professional-portfolio/#overview">Overview</a>
+      <a href="/professional-portfolio/#skills">Skills</a>
+      <a href="/professional-portfolio/#diaries">Diaries</a>
+      <a href="/professional-portfolio/#professional-contact">Contact</a>
+    {% else %}
+      <a href="/">Home</a>
+      <a href="/#about-me">About Me</a>
+      <a href="/blog/">Blog</a>
+      <a href="#contact">Contact</a>
+    {% endif %}
+  </nav>
+</header>

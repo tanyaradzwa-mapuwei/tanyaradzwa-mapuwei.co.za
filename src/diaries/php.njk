@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: My PHP Diary | Tanyaradzwa Mapuwei
+permalink: /diaries/php/
+professionalPage: true
+hideFooter: true
+---
+<section class="page-hero section">
+  <a class="back-link" href="/professional-portfolio/">← Back to Professional Portfolio</a>
+  <p class="eyebrow">Professional diary</p>
+  <h1>My PHP Diary</h1>
+  <p class="lead">A table of projects, practice work and notes connected to this diary.</p>
+</section>
+<section class="section diary-table-section">
+  <div class="table-wrap">
+    <table class="diary-table">
+      <thead>
+        <tr>
+          <th>Name of Project</th>
+          <th>Overseer</th>
+          <th>Link to Project</th>
+          <th>Status</th>
+          <th>Tools Used</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% set items = collections.diary | filterByDiary("PHP") %}
+      {% if items.length %}
+        {% for item in items %}
+        <tr>
+          <td>{{ item.data.projectName }}</td>
+          <td>{{ item.data.overseer }}</td>
+          <td>{% if item.data.projectLink %}<a href="{{ item.data.projectLink }}">Open</a>{% else %}—{% endif %}</td>
+          <td>{{ item.data.status }}</td>
+          <td>{{ item.data.toolsUsed }}</td>
+          <td>{{ item.data.notes }}</td>
+        </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="6">No entries yet. Add entries from the Decap CMS admin page.</td>
+        </tr>
+      {% endif %}
+      </tbody>
+    </table>
+  </div>
+</section>
