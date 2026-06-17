@@ -47,12 +47,29 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
  
+ <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+ 
 </head>
+
 <body{% if professionalPage %} class="professional-body"{% endif %}>
   <div class="grain"></div>
   {% include "nav.njk" %}
   <main>{{ content | safe }}</main>
   {% if not hideFooter %}{% include "footer.njk" %}{% endif %}
+  
   <script src="/assets/js/script.js"></script>
+
+
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
