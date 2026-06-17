@@ -7,7 +7,7 @@ public_folder: "/assets/images/uploads"
 
 site_url: "https://tanyaradzwa-mapuwei.co.za"
 display_url: "https://tanyaradzwa-mapuwei.co.za"
-logo_url: "/assets/images/profile/portrait-white-close.jpg"
+logo_url: "/assets/images/favicon.png"
 
 collections:
   - name: "blog"
@@ -17,8 +17,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+
       - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+
       - { label: "Date", name: "date", widget: "datetime" }
+
       - label: "Category"
         name: "category"
         widget: "select"
@@ -29,8 +32,13 @@ collections:
           - "My Faith"
           - "Out & About"
           - "Rooted Living"
+
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+
       - { label: "Short Description", name: "description", widget: "text" }
+
       - { label: "Tags", name: "tags", widget: "hidden", default: "post" }
+
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "diaries"
@@ -40,7 +48,9 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Tags", name: "tags", widget: "hidden", default: "diary" }
+
       - { label: "Permalink", name: "permalink", widget: "hidden", default: false }
+
       - label: "Diary"
         name: "diary"
         widget: "select"
@@ -51,9 +61,13 @@ collections:
           - "PHP"
           - "Business Analyst"
           - "Test Analyst"
+
       - { label: "Name of Project", name: "projectName", widget: "string" }
+
       - { label: "Overseer", name: "overseer", widget: "string", required: false }
+
       - { label: "Link to Project", name: "projectLink", widget: "string", required: false }
+
       - label: "Status"
         name: "status"
         widget: "select"
@@ -62,5 +76,7 @@ collections:
           - "In Progress"
           - "Completed"
           - "Paused"
+
       - { label: "Tools Used", name: "toolsUsed", widget: "string", required: false }
+
       - { label: "Notes", name: "notes", widget: "text", required: false }
